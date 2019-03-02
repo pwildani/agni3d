@@ -49,6 +49,7 @@
             });
 
             var fire = new THREE.Fire(fireTex);
+debugger;
 
             var wireframe = new THREE.Mesh(fire.geometry, wireframeMat.clone());
             fire.add(wireframe);

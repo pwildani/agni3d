@@ -27,7 +27,6 @@ THREE.Fire = function ( fireTex, color ) {
     fireMaterial.uniforms.scale.value = new THREE.Vector3( 1, 1, 1 );
     fireMaterial.uniforms.seed.value = Math.random() * 19.19;
 
-debugger;
 	THREE.Mesh.call( this, new THREE.BoxGeometry( 1.0, 1.0, 1.0 ), fireMaterial );
 };
 

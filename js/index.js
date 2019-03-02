@@ -51,7 +51,7 @@
             var fire = new THREE.Fire(fireTex);
 
             var wireframe = new THREE.Mesh(fire.geometry, wireframeMat.clone());
-            //fire.add(wireframe);
+            fire.add(wireframe);
             wireframe.visible = false;
 
             //scene.add(fire);

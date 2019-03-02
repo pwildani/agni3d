@@ -39,6 +39,7 @@
             renderer.setClearColor(0x000000);
             renderer.setSize(window.innerWidth, window.innerHeight);
             $dom.append(renderer.domElement);
+	    holoplay = new HoloPlay(scene, camera, renderer);
 
             var fireTex = THREE.ImageUtils.loadTexture("textures/firetex.png");
 
@@ -125,6 +126,8 @@
                 window.console.log('text ready', textMesh);
                 window.textMesh=textMesh;
                 window.textGeo=geometry;
+
+
                 
             } );
 
@@ -137,7 +140,9 @@
                 var t = clock.elapsedTime * controller.speed;
                 fire.update(t);
                 
-                renderer.render(scene, camera);
+                //renderer.render(scene, camera);
+		holoplay.render();
+
             })();
 
             var updateRendererSize = function() {

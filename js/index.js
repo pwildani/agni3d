@@ -146,8 +146,8 @@ debugger;
                 var t = clock.elapsedTime * controller.speed;
                 fire.update(t);
                 
-                //renderer.render(scene, camera);
-		holoplay.render();
+                renderer.render(scene, camera);
+		//holoplay.render();
 
             })();
 

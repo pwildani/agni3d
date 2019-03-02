@@ -54,11 +54,11 @@
             //fire.add(wireframe);
             wireframe.visible = false;
 
-            scene.add(fire);
+            //scene.add(fire);
 
             var clock = new THREE.Clock();
             var trackballControls = new THREE.TrackballControls(camera, renderer.domElement);
-            trackballControls.minDistance = 1;
+            trackballControls.minDistance = .5;
             trackballControls.maxDistance = 12;
 
             var controller = {
@@ -84,7 +84,8 @@
                 );
             };
 
-            var gui = new dat.GUI();
+/*
+           var gui = new dat.GUI();
             gui.add(controller, "speed", 0.1, 10.0).step(0.1);
             gui.add(controller, "magnitude", 0.0, 10.0).step(0.1).onChange(onUpdateMat);
             gui.add(controller, "lacunarity", 0.0, 10.0).step(0.1).onChange(onUpdateMat);
@@ -92,11 +93,14 @@
             gui.add(controller, "noiseScaleX", 0.5, 5.0).step(0.1).onChange(onUpdateMat);
             gui.add(controller, "noiseScaleY", 0.5, 5.0).step(0.1).onChange(onUpdateMat);
             gui.add(controller, "noiseScaleZ", 0.5, 5.0).step(0.1).onChange(onUpdateMat);
+*/
 
+/*
             gui.add(controller, "wireframe").onChange(function() {
                 var wireframe = fire.children[0];
                 wireframe.visible = controller.wireframe;
             });
+*/
 
             loader.load( 'fonts/helvetiker_bold.typeface.json', function ( font ) {
                 var geometry = new THREE.TextGeometry( 'Agni', {
@@ -122,7 +126,8 @@
                 textMesh.position.x = -(geometry.boundingBox.max.x - geometry.boundingBox.min.x)/2;
                 textMesh.position.y = -(geometry.boundingBox.max.y - geometry.boundingBox.min.y)/5*6;
                 textMesh.position.z = 0;
-                fire.add(textMesh);
+            scene.add(textMesh);
+               //fire.add(textMesh);
                 window.console.log('text ready', textMesh);
                 window.textMesh=textMesh;
                 window.textGeo=geometry;

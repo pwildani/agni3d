@@ -39,7 +39,7 @@
             renderer.setClearColor(0x000000);
             renderer.setSize(window.innerWidth, window.innerHeight);
             $dom.append(renderer.domElement);
-	    holoplay = new HoloPlay(scene, camera, renderer);
+	    //holoplay = new HoloPlay(scene, camera, renderer);
 
             var fireTex = THREE.ImageUtils.loadTexture("textures/firetex.png");
 

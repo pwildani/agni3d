@@ -54,7 +54,7 @@
             fire.add(wireframe);
             wireframe.visible = false;
 
-            //scene.add(fire);
+            scene.add(fire);
 
             var clock = new THREE.Clock();
             var trackballControls = new THREE.TrackballControls(camera, renderer.domElement);
